@@ -1,0 +1,40 @@
+//topics:
+//1.operators - it is used to add the +,-,*,% all this properties
+//2.variables - declaring the variables for good understanding of the css properties
+//3.nesting - ampersand is used to write the nesting properties 
+//4.mixin - for repetative lines of code we can use mixin
+//5.partials - means it is used to write the code in different pages
+
+@import "mixin";
+@import "var";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header{
+    @include flexprop;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg-color;  
+}
+
+h1{
+    @include commonprob(0.8rem,uppercase);
+    &:hover{
+        color: white;
+        cursor: pointer;
+    }
+    &::after{
+        content: ' tutorial!!!!!!!!';
+    }
+}
+
+p{
+    @include commonprob(0.8rem, capitalize);
+    &:hover{
+        color: white;
+        cursor: pointer;
+    }
+}
